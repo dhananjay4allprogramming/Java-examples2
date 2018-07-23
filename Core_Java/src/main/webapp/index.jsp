@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<META HTTP-EQUIV="Refresh" CONTENT="0;URL=view.action">
 <title>Test</title>
 </head>
 <body>

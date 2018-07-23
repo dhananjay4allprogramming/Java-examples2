@@ -4,7 +4,36 @@
 	"http://struts.apache.org/dtds/struts-2.5.dtd">
 	
 	<struts>
+		<include file="struts-default.xml"/>
 		<package name="default" extends="struts-default">
-			<action name=""></action>
+			<action name="view" class="com.JDBCstrutsCRUD.Display">
+				<result name="success">/retrive.jsp</result>
+				<result name="error">/error.jsp</result>
+			</action>
+			
+			<action name="insert" class="com.JDBCstrutsCRUD.Save">
+				<result name="success">/ssuccess.jsp</result>
+				<result name="error">error.jsp</result>
+			</action>
+			
+			<action name="del" class="com.JDBCstrutsCRUD.Delete">
+				<result name="success">/dsuccess.jsp</result>
+				<result name="error.jsp">/error.jsp</result>
+			</action>
+			
+			<action name="update" class="com.JDBCstrutsCRUD.Update">
+				<result name="success">/edit.jsp</result>
+				<result name="error">/error.jsp</result>
+			</action>
+			
+			<action name="updates" class="com.JDBCstrutsCRUD.Updates">
+				<result name="success">/usuccess.jsp</result>
+				<result name="error.jsp">/error.jsp</result>
+			</action>
+			<action name="*Link" class="com.JDBCstrutsCRUD.Links" method="{1}">
+				<result name="save">/insertr.jsp</result>
+				<result name="display">/retrive.jsp</result>
+				<result></result>
+			</action>
 		</package>
 	</struts>
